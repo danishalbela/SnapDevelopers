@@ -1,0 +1,7 @@
+{
+    "hosting": {
+      "site": "savariyasolutions",
+  
+      "public": "dist/savariya/browser"
+    }
+  }

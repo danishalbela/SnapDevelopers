@@ -1,0 +1,25 @@
+<section class="app section bd-container">
+  <div class="games">
+    @for (item of apps; track $index) {
+    <div class="banner_wrapper">
+      <div class="banner">
+        <img [src]="item.banner" [alt]="item.name" class="banner__image">
+      </div>
+      <div class="card__wrapper">
+        <div class="card">
+          <div class="card__info">
+            <img [src]="item.logo" [alt]="item.name" class="card__avatar">
+            <div>
+              <span>{{item.name}}</span>
+              <p>{{item.description}}</p>
+            </div>
+          </div>
+          <a [href]="item.link" target="_blank" rel="noopener noreferrer">
+             <button>{{item.buttonText}}</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,48 @@
+@if (footerIcon) {
+
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+            <a class="footer__logo">Pixel Pulse</a>
+            <span class="footer__description">Invictara Products</span>
+            <div>
+                @for (icon of footerIcon; track $index) {
+                    <a class="footer__social" (click)="route(icon.link)"><i [class]='icon.img'></i></a>
+                }
+            </div>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Services</h3>
+            <ul>
+                <li><a (click)="route('compressor')" class="footer__link" >Upload & Compress</a></li>
+                <li><a class="footer__link">Bulk Compression</a></li>
+                <li><a class="footer__link">Custom Settings</a></li>
+                <li><a class="footer__link">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Information</h3>
+            <ul>
+                <li><a class="footer__link">About Us</a></li>
+                <li><a class="footer__link">Contact us</a></li>
+                <li><a class="footer__link">Privacy policy</a></li>
+                <li><a class="footer__link">Terms of services</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Address</h3>
+            <ul>
+                <li>L-450 Sec 12 </li>
+                <li>Delhi NCR 201009</li>
+                <li>+91 7042471751</li>
+                <li>invictarasolutions&#64;gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="footer__copy">&#169; 2019 Invictara Solutions. All right reserved</p>
+</footer>
+}

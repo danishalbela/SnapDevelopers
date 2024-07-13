@@ -1,0 +1,20 @@
+@if(aboutSec){
+
+    <section class="about section bd-container" id="about">
+        <div class="about__container  bd-grid">
+            <div class="about__data">
+                <span class="section-subtitle about__initial">{{aboutSec.tag}}</span>
+                <h2 class="section-title about__initial">{{aboutSec.title}}</h2>
+                <h5>{{aboutSec.shortDesc}}</h5>
+                <p class="about__description">{{aboutSec.desc}}</p>
+
+                @if(aboutSec.btn.show){
+                <button class="button" (click)="navigate(aboutSec.btn.link)">{{aboutSec.btn.text}}</button>
+                }
+            </div>
+    
+            <img [src]="aboutSec.sectionImg" alt="" class="about__img">
+        </div>
+    </section>
+
+}

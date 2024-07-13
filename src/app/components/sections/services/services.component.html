@@ -1,0 +1,20 @@
+@if (offerSec) {
+
+    <section class="services section bd-container" id="services">
+        <span class="section-subtitle">{{offerSec.tag}}</span>
+        <h2 class="section-title">{{offerSec.title}}</h2>
+    
+        <div class="services__container  bd-grid">
+            @for (item of offerSec.services; track $index) {
+                <div class="services__content">
+                   <img [src]="item.img" alt="">
+                    <h3 class="services__title">{{item.title}}
+                    </h3>
+                    <p class="services__description">{{item.desc}}</p>
+                </div>
+            }
+    
+           
+        </div>
+    </section>
+}

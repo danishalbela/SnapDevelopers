@@ -1,0 +1,19 @@
+@if(applinkSec)
+{
+    <section class="app section bd-container">
+        <div class="app__container bd-grid">
+            <div class="app__data">
+                <span class="section-subtitle app__initial">{{applinkSec.tag}}</span>
+                <h2 class="section-title app__initial">{{applinkSec.title}}</h2>
+                <p class="app__description">{{applinkSec.desc}}</p>
+                <div class="app__stores">
+                    @for (item of applinkSec.AppStoreBtn; track $index) {
+                    <a (click)="navigate(item.link)"><img [src]="item.img" alt="" class="app__store"></a>
+                }
+                </div>
+            </div>
+    
+            <img [src]="applinkSec.sectionImg" alt="" class="app__img">
+        </div>
+    </section>
+}
